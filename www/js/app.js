@@ -31,7 +31,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'chat', 'socket.io'])
   $httpProvider.defaults.useXDomain = true;
   delete $httpProvider.defaults.headers.common['X-Requested-With'];
   //delete $httpProvider.defaults.headers.common['X-Requested-With'];
-  $sceDelegateProvider.resourceUrlWhitelist(['self', 'http://www.nickbolles.com/**', 'http://localhost:63342/**', 'http://localhost:8080/**', 'http://localhost:8080/gpabot/userdata', 'http://localhost:8081/**', 'http://localhost:8081/login','http://localhost:8080/gpabot/userdata']);
+  $sceDelegateProvider.resourceUrlWhitelist(['self', 'http://www.nickbolles.com/**', 'http://localhost:63342/**', 'http://localhost:8080/**', 'http://localhost:8080/gpabot/userdata', 'http://localhost:8081/**', 'http://localhost:8081/login','http://localhost:8080/gpabot/userdata', 'http://www.nickbolles.com:8084/','http://www.nickbolles.com:8084/*']);
   $stateProvider
 
   .state('start', {
@@ -78,7 +78,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'chat', 'socket.io'])
 })
 
 .factory('socket', function (socketFactory) {
-  var myIoSocket = io.connect('nickbolles.com:8084');
+  var myIoSocket = io.connect('http://nickbolles.com:8084');
 
   mySocket = socketFactory({
     ioSocket: myIoSocket
