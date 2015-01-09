@@ -1,0 +1,11 @@
+{
+  "name": "Serve",
+  "description": "Serve a directory",
+  "author": "Nick Bolles",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "4.10.*",
+	"node-commandline": "*"
+  }
+}

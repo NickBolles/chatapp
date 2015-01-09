@@ -1,0 +1,29 @@
+<ion-view view-title="Chat">
+  <ion-content>
+      sort: <input type="Text" ng-model="sort" > reverse: <button class="button" ng-click="toggleReverse()">{{reverse}}</button>
+      <div class="list card" ng-repeat="message in messages track by $index | orderBy:sort:reverse" >
+
+
+          <div class="item item-avatar">
+            <h2>{{message.user}}</h2>
+            <p>{{message.sent}}</p>
+          </div>
+
+          <div class="item item-body">
+            <p>
+              {{message.text}}
+            </p>
+          </div>
+      </div>
+
+
+
+
+  </ion-content>
+    <ion-footer-bar align-title="left" class="bar-assertive">
+        <input type="text" ng-model="newMessage.text" value="" placeholder="Enter a Message">
+        <div class="buttons" ng-click="sendMessage()">
+            <button class="button">Send</button>
+        </div>
+    </ion-footer-bar>
+</ion-view>
