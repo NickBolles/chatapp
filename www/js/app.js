@@ -78,7 +78,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'chat', 'socket.io'])
 })
 
 .factory('socket', function (socketFactory) {
-  var myIoSocket = io.connect('localhost:8084');
+  var myIoSocket = io.connect('nickbolles.com:8084');
 
   mySocket = socketFactory({
     ioSocket: myIoSocket
